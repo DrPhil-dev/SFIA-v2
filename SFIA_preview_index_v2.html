@@ -1,0 +1,463 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Firearms Instructors Association | SFIA</title>
+<meta name="description" content="Security Firearms Instructors Association (SFIA) – representing the interests and standards of firearms and security instructors in NSW." />
+<style>
+:root{
+  --navy:#0e3a53;
+  --navy2:#083042;
+  --ink:#13222b;
+  --muted:#51636d;
+  --wash:#f5f7f9;
+  --paper:#ffffff;
+  --line:#dbe5ec;
+  --accent:#1d6a8f;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: ui-sans-serif, -apple-system, Segoe UI, Roboto, Arial, Helvetica, sans-serif;
+  line-height:1.65;
+  background: var(--wash);
+  color: var(--ink);
+}
+
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+
+.wrap{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header{
+  background: linear-gradient(135deg, var(--navy), var(--navy2));
+  color:#fff;
+  padding: 42px 0 26px;
+}
+
+.header-grid{
+  display:grid;
+  grid-template-columns: 230px 1fr;
+  gap: 26px;
+  align-items:center;
+}
+
+header img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius: 12px;
+  background:#fff;
+}
+
+header h1{
+  margin:0 0 10px;
+  font-size: 2.15rem;
+  letter-spacing:.2px;
+}
+
+header p{
+  margin:0;
+  max-width: 70ch;
+  color: rgba(255,255,255,.92);
+}
+
+.nav{
+  position: sticky;
+  top:0;
+  z-index: 50;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  padding: 10px 0;
+}
+
+.nav-brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing:.2px;
+  font-size: .95rem;
+  white-space: nowrap;
+}
+
+.nav-mark{
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, var(--navy), var(--accent));
+}
+
+.nav-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 10px;
+  justify-content:flex-end;
+}
+
+.nav a{
+  color: var(--ink);
+  font-size:.95rem;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.nav a:hover{
+  background: rgba(29,106,143,.08);
+  text-decoration:none;
+}
+
+main{
+  padding: 34px 0 50px;
+}
+
+section{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 18px;
+}
+
+section h2{
+  margin: 0 0 10px;
+  color: var(--navy);
+  font-size: 1.45rem;
+  letter-spacing:.2px;
+}
+
+.muted{color: var(--muted)}
+
+.two-col{
+  display:grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 18px;
+}
+
+ul{padding-left: 18px; margin: 10px 0 0}
+li{margin-bottom: 6px}
+
+.callout{
+  margin-top: 14px;
+  padding: 14px 14px;
+  background: #e8f1f6;
+  border-left: 5px solid var(--navy);
+  border-radius: 12px;
+  color: #123345;
+}
+
+.committee{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 18px;
+  margin-top: 10px;
+}
+
+.committee div{
+  padding: 8px 0;
+  border-bottom: 1px dashed rgba(219,229,236,.9);
+}
+
+.committee div:last-child{border-bottom: 1px dashed rgba(219,229,236,.9)}
+
+.small{
+  font-size: .92rem;
+}
+
+footer{
+  padding: 22px 0 30px;
+  color: var(--muted);
+  font-size: .92rem;
+  text-align:center;
+}
+
+.footer-note{
+  max-width: 95ch;
+  margin: 10px auto 0;
+  padding: 0 20px;
+}
+
+form{
+  margin-top: 10px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+label{
+  display:block;
+  font-weight: 700;
+  font-size: .9rem;
+  margin: 0 0 6px;
+}
+
+input, textarea, select{
+  width:100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  font-size: 1rem;
+  color: var(--ink);
+  background:#fff;
+}
+
+textarea{min-height: 120px; resize: vertical}
+
+input:focus, textarea:focus, select:focus{
+  outline:none;
+  border-color: rgba(29,106,143,.55);
+  box-shadow: 0 0 0 4px rgba(29,106,143,.12);
+}
+
+.actions{
+  display:flex;
+  gap: 12px;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-top: 12px;
+}
+
+button{
+  border:0;
+  cursor:pointer;
+  padding: 11px 16px;
+  border-radius: 12px;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--navy), var(--accent));
+  color:#fff;
+}
+
+button.secondary{
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  font-weight: 700;
+}
+
+@media (max-width: 860px){
+  .header-grid{grid-template-columns: 1fr}
+  .two-col{grid-template-columns: 1fr}
+  .committee{grid-template-columns: 1fr}
+  .form-grid{grid-template-columns: 1fr}
+  header{padding: 34px 0 20px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap header-grid">
+    <div>
+      <img src="SFIA_Logo.jpg" alt="SFIA Logo">
+    </div>
+    <div>
+      <h1>Security Firearms Instructors Association (SFIA)</h1>
+      <p>Representing the interests and standards of firearms and security instructors in NSW through consultative engagement, professional development, and realistic incident-based training.</p>
+    </div>
+  </div>
+</header>
+
+<nav class="nav" aria-label="Primary navigation">
+  <div class="wrap nav-inner">
+    <div class="nav-brand">
+      <span class="nav-mark" aria-hidden="true"></span>
+      SFIA – NSW
+    </div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#training">Training</a>
+      <a href="#committee">Committee</a>
+      <a href="#membership">Membership</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+  <section id="about">
+    <h2>About SFIA</h2>
+    <p class="muted">
+      The Security Firearms Instructors Association (SFIA) has for over ten years represented the interests and standards of firearms and other security instructors in NSW.
+    </p>
+    <p class="muted">
+      SFIA previously contributed through the Security Industry Consultative Committee to the development of manuals, training videos, and the compilation of written and range tests approved for firearms students in NSW. These remain in use as an industry standard.
+    </p>
+    <p class="muted">
+      SFIA has been involved in legislative and industry changes aimed at improving training standards within the security industry, including training requirements for batons and handcuffs. The association supported the extension of firearms instruction from one day to three days for students and continues to advocate for improvements across the industry.
+    </p>
+    <div class="callout">
+      <strong>Intended audience.</strong>
+      <div class="small" style="margin-top:6px;">
+        This website is intended for individuals who hold a NSW security licence and appropriate firearms licensing, including 1F and H class.
+      </div>
+    </div>
+  </section>
+
+  <section id="training">
+    <div class="two-col">
+      <div>
+        <h2>Training and Industry Liaison</h2>
+        <p class="muted">
+          SFIA runs training days for members, keeps members abreast of specialist developments, and liaises with police, regulators, and legislators in the interests of safety, training quality, and industry consistency.
+        </p>
+        <ul class="muted">
+          <li>Realistic incident-based training for instructors</li>
+          <li>Professional development training days and updates</li>
+          <li>Consultative liaison with NSW Police and relevant regulators</li>
+          <li>Ongoing focus on safety, compliance, and standards</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Enquiries</h2>
+        <p class="muted">
+          For general enquiries, email <a href="mailto:info@sfia.org.au">info@sfia.org.au</a>.
+        </p>
+        <p class="small muted">
+          Disclaimer: SFIA is an independent association and is not NSW Police, the NSW Firearms Registry, or a licensing authority. Any reference to liaison or consultation does not imply endorsement.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="committee">
+    <h2>Committee</h2>
+    <div class="committee">
+      <div><strong>President</strong> – Phil Bos</div>
+      <div><strong>Vice President 1</strong> – Adam Ickowicz</div>
+      <div><strong>Vice President 2</strong> – Darren Upson</div>
+      <div><strong>Secretary</strong> – Scott Brown</div>
+      <div><strong>Treasurer</strong> – Rodney Plaut</div>
+      <div><strong>Range Captain 1</strong> – Sonya Pritchard</div>
+      <div><strong>Range Captain 2</strong> – Florette Cohen</div>
+    </div>
+  </section>
+
+  <section id="membership">
+    <h2>Membership</h2>
+    <p class="muted">
+      Membership is intended for appropriately licensed NSW security firearms instructors. Applications will open in the coming months. Enquiries are welcome in the interim.
+    </p>
+    <p class="small muted">
+      SFIA is not a licensing authority and does not issue firearms or security licences. Members are responsible for compliance with all applicable legislation and licence conditions.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p class="muted">
+      Email: <a href="mailto:info@sfia.org.au">info@sfia.org.au</a>
+    </p>
+
+    <form id="contactForm" autocomplete="on">
+      <div class="form-grid">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required>
+        </div>
+        <div>
+          <label for="org">Organisation</label>
+          <input id="org" name="org" type="text" placeholder="Organisation (optional)">
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="name@example.com" required>
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" placeholder="Optional">
+        </div>
+      </div>
+
+      <div style="margin-top:12px;">
+        <label for="eligibility">Eligibility (self-declaration)</label>
+        <select id="eligibility" name="eligibility" required>
+          <option value="" selected disabled>Select…</option>
+          <option value="I confirm I hold a NSW security licence and appropriate firearms licensing (including 1F and H class).">
+            I confirm I hold a NSW security licence and appropriate firearms licensing (including 1F and H class).
+          </option>
+          <option value="I am enquiring generally (I understand membership is intended for appropriately licensed persons).">
+            I am enquiring generally (I understand membership is intended for appropriately licensed persons).
+          </option>
+        </select>
+      </div>
+
+      <div style="margin-top:12px;">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Briefly outline your enquiry…" required></textarea>
+      </div>
+
+      <div class="actions">
+        <button type="submit">Send enquiry</button>
+        <button type="button" class="secondary" id="clearBtn">Clear</button>
+        <span class="small muted">Submitting opens your email client with a pre-filled message.</span>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer>
+  © 2026 Security Firearms Instructors Association (SFIA) | NSW Australia
+  <div class="footer-note">
+    This website is informational in nature. SFIA does not provide legal advice. Users should ensure compliance with relevant legislation and licence conditions.
+  </div>
+</footer>
+
+<script>
+(function(){
+  const form = document.getElementById('contactForm');
+  const clearBtn = document.getElementById('clearBtn');
+  function enc(s){ return encodeURIComponent(s || ''); }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const org = document.getElementById('org').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const eligibility = document.getElementById('eligibility').value;
+    const msg = document.getElementById('message').value.trim();
+
+    const subject = `SFIA website enquiry – ${name}`;
+    const bodyLines = [
+      `Name: ${name}`,
+      `Organisation: ${org || 'N/A'}`,
+      `Email: ${email}`,
+      `Phone: ${phone || 'N/A'}`,
+      `Eligibility: ${eligibility}`,
+      ``,
+      `Message:`,
+      msg
+    ];
+
+    window.location.href = `mailto:info@sfia.org.au?subject=${enc(subject)}&body=${enc(bodyLines.join('\n'))}`;
+  });
+
+  clearBtn.addEventListener('click', function(){
+    form.reset();
+  });
+})();
+</script>
+
+</body>
+</html>
